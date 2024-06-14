@@ -1,0 +1,30 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.reset-button {
+  font-family: 'Century Gothic', sans-serif; 
+  margin-top: 60px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: gray;
+}

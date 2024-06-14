@@ -1,0 +1,25 @@
+.information {
+  margin: 20px 0;
+  font-size: 2rem;
+  cursor: default;
+}
+
+.currentPlayer {
+  color: black;
+}
+
+.result {
+  font-size: 2rem;
+}
+
+.cursor-x {
+  cursor: url("../../../assets/X.png"), auto;
+  width: 32px;
+  height: 32px;
+}
+
+.cursor-o {
+  cursor: url("../../../assets/O.png"), auto;
+  width: 32px;
+  height: 32px;
+}

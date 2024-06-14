@@ -1,0 +1,28 @@
+.field {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 колонки по 100px каждая */
+  grid-template-rows: repeat(3, 100px); /* 3 строки по 100px каждая */
+  width: 306px; /* (100px * 3 колонки) + (2px * 2 отступа) */
+  margin-top: 20px; /* отступ сверху */
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  font-size: 2rem; /* размер текста в ячейке */
+  border: none; /* убираем стандартные бордеры */
+  border-right: 4px solid black; /* черная правая рамка */
+  border-bottom: 4px solid black; /* черная нижняя рамка */
+}
+
+.cell:nth-child(3n) {
+  border-right: none; /* убираем правую рамку у каждой третьей ячейки в строке */
+}
+
+.cell:nth-child(n+7) {
+  border-bottom: none; /* убираем нижнюю рамку у всех ячеек в третьей строке */
+}
