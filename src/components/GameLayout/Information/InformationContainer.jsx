@@ -3,11 +3,7 @@ import styles from "./InformationLayout.module.css";
 import cursorX from "../../../assets/X.png";
 import cursorO from "../../../assets/O.png";
 
-export const InformationContainer = ({
-  currentPlayer,
-  isGameEnded,
-  isDraw,
-}) => {
+const InformationContainer = ({ currentPlayer, isGameEnded, isDraw }) => {
   const getCursorStyle = () => {
     if (currentPlayer === "X") {
       return {
@@ -25,7 +21,7 @@ export const InformationContainer = ({
   };
 
   return (
-    <div className={styles.information}>
+    <div className={styles.information} style={getCursorStyle()}>
       {isDraw && <div className={styles.result}>Draw</div>}
       {!isDraw && isGameEnded && (
         <div className={styles.result}>
@@ -39,7 +35,6 @@ export const InformationContainer = ({
             className={
               currentPlayer === "X" ? styles.currentPlayer : styles.player
             }
-            style={getCursorStyle()}
           >
             {currentPlayer}
           </span>
@@ -54,3 +49,5 @@ InformationContainer.propTypes = {
   isGameEnded: PropTypes.bool.isRequired,
   isDraw: PropTypes.bool.isRequired,
 };
+
+export default InformationContainer;
